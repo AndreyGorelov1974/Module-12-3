@@ -9,24 +9,18 @@
 
 #include <iostream>
 #include <string>
+#include <cassert>
+
+float travelTime(float distance, float speed)
+{
+    assert(speed > 0);
+    return distance / speed;
+}
 
 int main()
 {
+    float distanse = 100.0f;
+    float speed = 25.5f;
 
-    std::string listTenants[] = {"SidorovA", "IvanovA", "PetrovA", "SidorovB", "IvanovB", "PetrovB", "SidorovC", "IvanovC", "PetrovC", "SidorovD"};
-
-    for (int i = 0; i < 3; i++)
-    {
-        int apartmentNumber;
-        std::cout << "Enter the apartment number: ";
-        std::cin >> apartmentNumber;
-
-        while (apartmentNumber < 1 || apartmentNumber > 10)
-        {
-            std::cout << "There is no apartment with this number. Enter the correct number from 1 to 10: ";
-            std::cin >> apartmentNumber;
-        }
-
-        std::cout << "The apartment number " << apartmentNumber << " lives in " << listTenants[--apartmentNumber] << std::endl;
-    }
+    std::cout << "Travel time: " << travelTime(distanse, speed) << std::endl;
 }
