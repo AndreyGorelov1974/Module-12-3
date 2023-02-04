@@ -20,7 +20,7 @@ float travelTime(float distance, float speed)
 int main()
 {
     float distanse = 100.0f;
-    float speed = 25.5f;
+    float speed = -25.5f;
 
     std::cout << "Travel time: " << travelTime(distanse, speed) << std::endl;
 }
